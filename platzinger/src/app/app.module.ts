@@ -7,11 +7,11 @@ import { HomeComponent } from './home/home.component';
 import { LoginComponent } from "./login/login.component";
 import { ConversationComponent } from "./conversation/conversation.component";
 import { ProfileComponent } from "./profile/profile.component";
+import { MenuComponent } from './menu/menu.component';
 
 import { RouterModule, Routes } from '@angular/router';
-import { MenuComponent } from './menu/menu.component';
 import { SearchPipe } from './pipes/searcg';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule} from '@angular/forms';
 
 const appRoutes: Routes = [
  {path: '', component: HomeComponent},
@@ -34,7 +34,8 @@ const appRoutes: Routes = [
   imports: [
     BrowserModule,
     RouterModule.forRoot(appRoutes),
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
